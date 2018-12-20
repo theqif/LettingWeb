@@ -28,7 +28,7 @@ class LettingWeb {
 		# 	repeat request with a 'showing' offset which increments
 		while ($start < $total) {
 
-			#wget "https://www.lettingweb.com/digitalapi/jsonsearch?apikey=1261&showing=108"  -O 108.json
+			#wget "https://www.lettingweb.com/digitalapi/jsonsearch?apikey={key}&showing=108"  -O 108.json
 			$url     = $this->search.'&showing='.$start;
 			if ($this->debug) echo "Fetching from offset [$start] : [$url]\n";
 			$json    = file_get_contents($url);
